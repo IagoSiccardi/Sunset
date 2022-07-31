@@ -1,0 +1,474 @@
+@keyframes bannerMovement {
+ 
+    
+    50% {
+        
+        
+         transform: rotateX(180deg) 
+    }
+}
+
+@keyframes down {
+
+
+
+    0% {
+        transform: translateY(0px);
+        
+    }
+
+    50% {
+        transform: translateY(10px);
+        
+    }
+    100% {
+        
+        transform: translateY(0px);
+    }
+   
+}
+
+
+
+.home .banner {
+   /*  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    margin-top: 70px;
+    position: relative;
+    
+}
+
+.home .banner .sunset{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    text-align: right;
+    
+    
+}
+
+
+
+.home .banner .sunset .vesti{
+    font-family: 'Poiret One';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: -40px;
+}
+
+.home .banner .sunset .sunsetSpan {
+    font-family: 'Archivo Black';
+    font-size: 3rem;
+    color: var(--Naranja);
+    padding: 0;
+    animation: bannerMovement normal 1s  ;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+}
+
+
+
+.home .banner .imagen {
+    background-image: url(../../assets/images/buzoBanner.png);
+    
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 45vh;
+    width: 100%;
+    text-align: right;
+    
+}
+
+.home .banner .bajar {
+    display: none;
+    position: absolute;
+    top: 70vh;
+    color: var(--Naranja);
+    font-size: 50px;
+    left: calc(50% - 25px);
+    animation: down normal .5s;
+    animation-iteration-count: 5;
+    transition: all .5s;
+}
+
+
+
+.home .banner .bajar:hover {
+    color: var(--NaranjaHeader);
+    transform: translateY(10px);
+}
+
+
+
+.home .colecciones {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+.home .colecciones .coleccion {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    height: 50vh;
+     
+    
+   
+    
+}
+
+
+.home .colecciones .coleccion img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    
+    
+    
+}
+
+
+.home .colecciones .coleccion img:hover {
+    transform: scale(1.3);
+}
+
+
+
+.home .colecciones .coleccion .coleccionNombre {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(-50%);
+    
+}
+
+.home .colecciones .coleccion .glitch {
+    
+    color: rgb(255, 255, 255, 0.9);
+    font-family: "Cinzel";
+    font-size: 2rem;
+    transition: all .5s;
+    
+}
+
+  
+.home .colecciones .coleccion .glitch:hover {
+    transform: scale(1.5);
+   
+}
+
+.home .h2 {
+    margin: 70px 0 40px ;
+    text-align: center;
+}
+
+.home .Mas__vendidos {
+
+    display: grid;
+    margin: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+}
+
+
+.buzo {
+    
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        margin-bottom: 50px;
+        width:100%;   
+        
+        
+}
+
+
+
+
+
+  .buzo .img-container:hover {
+    transform: scale(1.1) ;
+   
+    
+    
+}
+
+.buzo img { 
+
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+
+
+.buzo .img-container{
+    
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s; 
+    
+    
+  }
+
+  .buzo .img-container p{
+    
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    cursor: pointer;
+  }  
+
+.buzo .img-container .price{
+    position: absolute;
+    bottom: 30px;
+    padding: 30px;
+    
+    right: 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+  } 
+  
+
+
+
+.buzo .carrito {
+    
+    margin-top: 25px;
+    background-color: white;
+    display: inline-block;
+    transition: .5s;
+
+}
+
+.buzo .carrito:hover{
+    transform: scale(1.1);
+}
+
+
+.buzo .carrito a {
+
+    color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: black;    
+    transition: 0.5s;
+    
+}
+
+.buzo .carrito a:hover {
+    
+    background-color: var(--Naranja);
+    color: black;
+}
+
+
+
+
+    
+@media (min-width : 500px) {
+
+
+
+    .home .banner .sunset .vesti{
+       
+        font-size: 4.5rem;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: -40px;
+    }
+    
+    .home .banner .sunset .sunsetSpan {
+        font-family: 'Archivo Black';
+        font-size: 5rem;
+        color: var(--Naranja);
+        padding: 0;
+    }
+    
+
+
+    .home .colecciones {
+        display: flex;
+        
+        
+    }
+    
+    .home .colecciones .coleccion {
+        width: 45%;
+        
+        
+        
+        
+    }
+
+
+
+    .home .buzo{
+
+        width:100%;
+        margin-left: 0%;
+        margin-right: 0%;        
+        
+    }
+
+    
+
+    
+
+
+    
+    .home .colecciones .coleccion .glitch {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (min-width : 744px) {
+
+    .home .banner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        position: relative;
+        
+    }
+    
+    .home .banner .sunset{
+        width: 30%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+       
+        margin-left:50px;
+        
+    }
+    
+    
+    
+    .home .banner .sunset .vesti{
+        position: relative;
+        font-size: 5rem;
+        
+    }
+    
+    .home .banner .sunset .sunsetSpan {
+        position: relative;
+        font-size: 6rem;
+        
+        
+    }
+    
+    
+    
+    .home .banner .imagen {
+        
+        width: 60%;
+        background-size: 65vh;
+        height: 94vh;
+       
+        
+    }
+
+    .home .Mas__vendidos {
+
+        display: grid;
+        margin: 0 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        
+    }
+
+
+    .home .banner .bajar {
+        display: block;
+    }
+
+
+    .home .colecciones .coleccion {
+        width: 49%;
+        height: 90vh;
+    }
+
+
+    .home .colecciones .coleccion .glitch {
+        font-size: 3rem;
+    }
+
+}
+
+
+
+@media (min-width : 1080px ) {
+
+    .home .banner .sunset{
+        width: 40%;
+        
+    }
+    
+    
+    
+    .home .banner .sunset .vesti{
+        
+        font-size: 8rem;
+        
+    }
+    
+    .home .banner .sunset .sunsetSpan {
+        
+        font-size: 9rem;
+        
+        
+    }
+    
+    
+    
+    .home .banner .imagen {
+        width: 50%;
+       
+        
+    }
+
+    .home .colecciones .coleccion {
+        width: 45%;
+        
+    }
+
+
+    .home .buzo:nth-child(3){
+        display: none;
+    }
+
+    .home .colecciones .coleccion .glitch {
+        font-size: 4rem;
+    }
+}
